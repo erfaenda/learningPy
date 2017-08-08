@@ -31,3 +31,4 @@ harold = Girafes()
 
 harold.breathe()
 reginald.eat_leavs()
+reginald.move()
