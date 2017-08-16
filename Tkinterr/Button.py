@@ -1,5 +1,10 @@
 from tkinter import *
+
+
+def hello():
+    print('RAPE ME HARD!!!')
+
 tk = Tk()
-canvas = Canvas(tk, width=500, height=500)
-canvas.pack()
-canvas.create_line(0, 0, 500, 500)
+btn = Button(tk, text='rape me!', command=hello)
+btn.pack()
+tk.mainloop()

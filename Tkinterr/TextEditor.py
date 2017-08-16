@@ -1,27 +1,17 @@
 from tkinter import *
 
-class Application(Frame):
-    def say_hi(self):
-        print ("hi there, everyone!")
+root = Tk()
+root.geometry('700x700')
+root.title('Root')
 
-    def createWidgets(self):
-        self.QUIT = Button(self)
-        self.QUIT["text"] = "QUIT"
-        self.QUIT["fg"]   = "red"
-        self.QUIT["command"] =  self.quit
-        self.QUIT.pack({"side": "left"})
+def new_window(event):
+    window = Toplevel(root)
 
-        self.hi_there = Button(self)
-        self.hi_there["text"] = "Hello",
-        self.hi_there["command"] = self.say_hi
+lab = Label(root, text='Press here')
+but = Button(root, text='Ok')
+but.bind('<Button->', new_window)
 
-        self.hi_there.pack({"side": "left"})
+lab.pack()
+but.pack()
 
-
-    def __init__(self, master=None):
-        Frame.__init__(self, master)
-        self.pack()
-        self.createWidgets()
-
-app = Application()
-app.mainloop()
+root.mainloop()
