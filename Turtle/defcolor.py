@@ -14,3 +14,4 @@ def mysquear(size, filled):
         t.end_fill()
 
 mysquear(100, True)
+mysquear(400, False)
