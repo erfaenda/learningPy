@@ -1,5 +1,3 @@
-import Sys
-
 def silly_age_joke():
     print('Сколько тебе лет щщегол?')
     age = int(Sys.stdin.readline())
