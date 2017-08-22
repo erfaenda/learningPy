@@ -16,6 +16,9 @@ class User():
         print('Доброго времени суток ' + self.fist_name + ' ' + self.last_name)
 
 simple_user = User('Витек', 'Ракетов', 'очкодёр', 'кабинет белых камней')
+just_user = User('Морис', 'Пескарев', 'клееерк', 'кабинет под лесницей')
 
 simple_user.describe_user()
 simple_user.greet_users()
+just_user.describe_user()
+just_user.greet_users()
