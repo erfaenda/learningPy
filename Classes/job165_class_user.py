@@ -22,3 +22,29 @@ simple_user.describe_user()
 simple_user.greet_users()
 just_user.describe_user()
 just_user.greet_users()
+
+class Privelegis():
+    '''отдельный самодостаточный класс содержит в себе различные привелегии'''
+    def __init__(self, privelegis=['разрешено добавлять пользователя',
+                      'разрешено удалять пользователя',
+                      'разрешено банить пользователей']):
+        '''инициализирует привелегии'''
+        self.privelegis = privelegis
+
+    def show_privilegis(self):
+        print('Имеющиеся привелегии: '+ str(self.privelegis))
+
+
+
+class Admin(User):
+    '''класс характеризующий особенности администратора'''
+    def __init__(self, fist_name, last_name, departments, location):
+        '''инициализация специфических данных класса админ'''
+        super().__init__(fist_name, last_name, departments, location)
+        self.privelegis = Privelegis()
+
+
+print('-------------------------------')
+dcadmin = Admin('ДЭнчик', 'Кабельканалов', 'СМЫВ', 'Ырлова')
+dcadmin.greet_users()
+dcadmin.privelegis.show_privilegis()

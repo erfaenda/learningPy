@@ -35,28 +35,25 @@ my_new_car.incriment_odometr(198)
 my_new_car.read_odometr()
 print('----------------------------------------')
 
+class Battery():
+    '''отдельный класс характеризующий различные параметры батарей'''
+    def __init__(self, battery_size=70):
+        self.battery_size = battery_size
+
+    def battery_info(self):
+        ''' Вывод информации о батареи '''
+        print('У этого электромобиля ' + str(self.battery_size) + " -kWh батарея")
+
 class ElectricCar(Car):
     """класс характеризующий особенности электротранспорта"""
     def __init__(self, make, model, year):
         """
         Инициализация атрибутов класса-родителя
-        Затем инициализируем атрибуты специфические для электромобиля
-        :param make:
-        :param model:
-        :param year:
-        """
+        Затем инициализируем атрибуты специфические для электромобиля"""
         super().__init__(make, model, year)
-        self.battery_size = 70
-
-    def battery_info(self):
-        '''
-        Вывод информации о батареи
-        :param self:
-        :return:
-        '''
-        print('У этого электромобиля ' + str(self.battery_size) + " -kWh батарея")
+        self.battery = Battery()
 
 
 my_tesla = ElectricCar('tesla', 'model s', '2016')
 print(my_tesla.get_descriptive_name())
-print(my_tesla.battery_info())
+my_tesla.battery.battery_info()
