@@ -2,19 +2,14 @@ class Restaraunt2():
     '''
     Представляет класс ресторана
     '''
-    def __init__(self, restaurant_name, cuisine_type):
+    def __init__(self, restaurant_name2, cuisine_type2):
         '''инициализация атрибутов ресторана'''
-        self.restauran_name = restaurant_name
-        self.cuisine_type = cuisine_type
+        self.restauran_name2 = restaurant_name2
+        self.cuisine_type2 = cuisine_type2
 
-    def describe_restaurant(self):
-        print('Ресторан ' + str(self.restauran_name) + ' ' + str(self.cuisine_type))
+    def describe_restaurant2(self):
+        print('Ресторан ' + str(self.restauran_name2) + ' ' + str(self.cuisine_type2))
 
-    def open_restaurant_name(self):
-        print('Рестаран ' + str(self.restauran_name) + ' ' + 'открыт!')
+    def open_restaurant_name2(self):
+        print('Рестаран ' + str(self.restauran_name2) + ' ' + 'открыт!')
 
-
-my_restaurant = Restaraunt2('Звездочка', 'Славянская Кухня!')
-
-my_restaurant.describe_restaurant()
-my_restaurant.open_restaurant_name()
